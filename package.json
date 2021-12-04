@@ -4,7 +4,7 @@
   "description": "major project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
   },
   "author": "Deepak Negi",
   "license": "ISC",
