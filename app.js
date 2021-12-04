@@ -27,7 +27,9 @@ app.use(productRoute);
 app.use(userRoute);
 app.use(paymentRoute);
 app.use(orderRoute);
-
+app.get("/", (req, res) => {
+  res.send("hello world");
+});
 //db connection
 mongoose.connect(process.env.DATABASE).then(() => {
   console.log("DB Connection established");
