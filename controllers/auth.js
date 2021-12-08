@@ -10,10 +10,10 @@ exports.signup = (req, res) => {
   user.save((err, user) => {
     if (err) {
       if (err.code == 11000) {
-        return res.json({ message: "already registered" });
+        return res.status(400).json({ message: "already registered" });
       }
 
-      return res.json({ error: errorHandler(err) });
+      return res.status(400).json({ error: errorHandler(err) });
     }
     user.salt = undefined;
     user.hashed_passwords = undefined;
